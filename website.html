@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NoobyYT</title>
+    <style>
+        body {
+            background-image: url('https://i.imgur.com/BEVTtQE_d.webp?maxwidth=760&fidelity=grand');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+
+        #navbar a {
+            color: white;
+            font-size: 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: transform 0.2s, font-size 0.2s, transform-origin 0.2s;
+            transform-origin: center;
+        }
+
+        #navbar a:hover {
+            transform: scale(1.1);
+            font-size: 22px;
+        }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        #content h1 {
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        #content iframe {
+            width: 80%;
+            height: 50%;
+            margin-top: 50px;
+            box-shadow: 2px 2px 4px black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener("load", function() {
+            const iframe = document.querySelector("iframe");
+            const width = iframe.clientWidth;
+            const height = (9 / 16) * width;
+            iframe.style.height = `${height}px`;
+        });
+    </script>
+
+    <div id="navbar">
+        <a href="https://www.roblox.com/users/1234567890/profile" target="_blank">Roblox Profile</a>
+        <a href="https://discord.gg/1234567890" target="_blank">Discord Server</a>
+        <a href="https://www.youtube.com/channel/UC1234567890" target="_blank">YouTube Channel</a>
+    </div>
+    <div id="content">
+        <h1>Welcome to NoobyYT</h1>
+        <h1>| Latest Video |</h1>
+        <iframe src="https://www.youtube.com/embed/37R686eUqPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</body>
+
+</html>
